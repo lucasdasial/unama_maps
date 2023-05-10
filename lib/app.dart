@@ -12,7 +12,7 @@ class App extends StatelessWidget {
       title: "Unama Maps",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: false,
+        // useMaterial3: false,
         colorScheme: ColorScheme.fromSeed(
             seedColor: Color.fromARGB(255, 104, 207, 173),
             brightness: Brightness.light),
