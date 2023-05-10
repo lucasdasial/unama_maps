@@ -8,7 +8,7 @@ class GalleryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Galeria')),
+      appBar: AppBar(title: const Text('Galeria 🖼️'), elevation: 1),
       body: const Center(
         child: Text('GalleryPage'),
       ),
