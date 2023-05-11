@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:unama_maps/pages/contact_page.dart';
 import 'package:unama_maps/pages/gallery_page.dart';
 import 'package:unama_maps/pages/map_page.dart';
@@ -42,10 +43,10 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: pc,
         onPageChanged: setCurrentPage,
-        children: const [
-          ContactPage(),
+        children: [
+          const ContactPage(),
           MapPage(),
-          GalleryPage(),
+          const GalleryPage(),
         ],
       ),
       backgroundColor: Colors.green,
@@ -54,17 +55,17 @@ class _HomePageState extends State<HomePage> {
         color: Colors.green.shade900,
         items: const <Widget>[
           Icon(
-            Icons.list,
+            LineIcons.thumbsUp,
             size: 30,
             color: Colors.white,
           ),
           Icon(
-            Icons.map,
+            LineIcons.mapMarked,
             size: 30,
             color: Colors.white,
           ),
           Icon(
-            Icons.image,
+            LineIcons.images,
             size: 30,
             color: Colors.white,
           ),
