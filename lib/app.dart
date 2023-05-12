@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:unama_maps/pages/contact_page.dart';
 import 'package:unama_maps/pages/gallery_page.dart';
+import 'package:unama_maps/pages/home_page.dart';
 import 'package:unama_maps/pages/map_page.dart';
 
 class App extends StatelessWidget {
@@ -16,13 +17,15 @@ class App extends StatelessWidget {
       theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.green)),
-      initialRoute: '/map',
-      routes: {
-        '/map': (context) => MapPage(),
-        '/contacts': (context) => const ContactPage(),
-        '/gallery': (context) => const GalleryPage(),
-        '/details': (context) => const ContactPage(),
-      },
+      home: const HomePage(),
+
+      // initialRoute: '/map',
+      // routes: {
+      //   '/map': (context) => MapPage(),
+      //   '/contacts': (context) => const ContactPage(),
+      //   '/gallery': (context) => const GalleryPage(),
+      //   '/details': (context) => const ContactPage(),
+      // },
     );
   }
 }
