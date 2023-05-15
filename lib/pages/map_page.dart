@@ -12,27 +12,27 @@ class MapPage extends StatelessWidget {
         placeName: 'Tv Unama',
         distanceTop: 0.35,
         distanceLeft: 0.22,
-        redirectTo: 'tv_unama'),
+        id: 'tv_unama'),
     UnamaMapPinData(
         placeName: 'Setor Acadêmico',
         distanceTop: 0.46,
         distanceLeft: 0.56,
-        redirectTo: 'setor_academico'),
+        id: 'setor_acdm'),
     UnamaMapPinData(
         placeName: 'Labs Computação',
         distanceTop: 0.46,
         distanceLeft: 0.32,
-        redirectTo: 'labs_pc'),
+        id: 'labs_pc'),
     UnamaMapPinData(
         placeName: 'Bloco F - Cursos saúde',
         distanceTop: 0.25,
         distanceLeft: 0.82,
-        redirectTo: 'bloco_f'),
+        id: 'bloco_f'),
     UnamaMapPinData(
         placeName: 'Auditório',
         distanceTop: 0.41,
         distanceLeft: 0.24,
-        redirectTo: 'tv_unama'),
+        id: 'tv_unama'),
   ];
 
   List<Widget> generateMapPinList() {
@@ -44,7 +44,7 @@ class MapPage extends StatelessWidget {
             placeName: pin.placeName,
             distanceTop: pin.distanceTop,
             distanceLeft: pin.distanceLeft,
-            redirectTo: pin.redirectTo),
+            id: pin.id),
       );
     }
 

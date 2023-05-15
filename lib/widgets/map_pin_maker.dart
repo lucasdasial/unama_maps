@@ -7,21 +7,21 @@ class MapPinMaker extends StatelessWidget {
   final String placeName;
   final double distanceTop;
   final double distanceLeft;
-  final String redirectTo;
+  final String id;
 
   const MapPinMaker({
     super.key,
     required this.placeName,
     required this.distanceTop,
     required this.distanceLeft,
-    required this.redirectTo,
+    required this.id,
   });
 
   _handleOnPress(BuildContext context) {
-    // Navigator.pushNamed(context, redirectTo);
     Navigator.of(context).push(MaterialPageRoute(
         builder: (ctx) => DetailsPage(
               placeName: placeName,
+              id: id,
             )));
   }
 
