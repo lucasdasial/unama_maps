@@ -12,15 +12,20 @@ class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Contatos')),
+      appBar: AppBar(
+        title: const Text('Contatos 🌐'),
+        elevation: 1,
+      ),
       body: Center(
         child: Column(
           // mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text(
-              'Conecte-se com unama',
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+            const Image(
+              image: AssetImage("assets/images/unama_logo.png"),
+              width: 200,
+              height: 200,
+              fit: BoxFit.cover,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16),

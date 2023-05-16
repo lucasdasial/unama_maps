@@ -1,4 +1,6 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:unama_maps/pages/contact_page.dart';
 import 'package:unama_maps/pages/gallery_page.dart';
 import 'package:unama_maps/pages/map_page.dart';
@@ -26,31 +28,50 @@ class _HomePageState extends State<HomePage> {
     pc = PageController(initialPage: currentPage);
   }
 
+  void handleOnTap(int pageSelected) {
+    print('lucas');
+    pc.animateToPage(
+      pageSelected,
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.ease,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
         controller: pc,
         onPageChanged: setCurrentPage,
-        children: const [
-          ContactPage(),
+        children: [
+          const ContactPage(),
           MapPage(),
-          GalleryPage(),
+          const GalleryPage(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentPage,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Contatos'),
-          BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Mapa'),
-          BottomNavigationBarItem(icon: Icon(Icons.image), label: 'Galeria'),
+      backgroundColor: Colors.green,
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.green.shade50,
+        color: Colors.green.shade900,
+        items: const <Widget>[
+          Icon(
+            LineIcons.thumbsUp,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            LineIcons.mapMarked,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            LineIcons.images,
+            size: 30,
+            color: Colors.white,
+          ),
         ],
-        onTap: (pageSelected) {
-          pc.animateToPage(pageSelected,
-              duration: const Duration(milliseconds: 400), curve: Curves.ease);
-        },
-        // selectedItemColor: Colors.green[300],
-        selectedIconTheme: const IconThemeData(size: 35),
+        onTap: handleOnTap,
+        index: currentPage,
       ),
     );
   }

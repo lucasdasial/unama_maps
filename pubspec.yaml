@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
 
   url_launcher: ^6.0.9
+  curved_navigation_bar: ^1.0.3 #latest version
+  line_icons: ^2.0.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -58,8 +60,14 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - assets/images
+  assets:
+    - assets/images/logo_horizontal.png
+    - assets/images/unama_logo.png
+    - assets/images/map_unama.png
+    - assets/images/places/bloco_f.png
+    - assets/images/places/setor_acdm.png
+    - assets/images/places/labs_pc.png
+    - assets/images/places/auditorio.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
