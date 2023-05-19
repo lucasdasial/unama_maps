@@ -15,43 +15,53 @@ class ContactPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Contatos 🌐'),
         elevation: 1,
+        centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          // mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const Image(
-              image: AssetImage("assets/images/unama_logo.png"),
-              width: 200,
-              height: 200,
-              fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: ElevatedButton(
-                onPressed: () async => _onPressed(_urlSite),
-                style: ElevatedButton.styleFrom(fixedSize: const Size(200, 50)),
-                child: const Text('Site Oficial'),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Center(
+          child: Column(
+            // mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const Image(
+                image: AssetImage("assets/images/unama_logo.png"),
+                width: 200,
+                height: 200,
+                fit: BoxFit.cover,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: ElevatedButton(
-                onPressed: () async => _onPressed(_urlInstaUnama),
-                style: ElevatedButton.styleFrom(fixedSize: const Size(200, 50)),
-                child: const Text('@Unama Oficial'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: ElevatedButton(
-                onPressed: () async => _onPressed(_urlInstaCurso),
-                style: ElevatedButton.styleFrom(fixedSize: const Size(200, 50)),
-                child: const Text('@Computação Unama'),
-              ),
-            ),
-          ],
+              Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 80,
+                    child: ElevatedButton(
+                      onPressed: () async => _onPressed(_urlSite),
+                      child: const Text('Site Oficial'),
+                    ),
+                  )),
+              Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 80,
+                    child: ElevatedButton(
+                      onPressed: () async => _onPressed(_urlInstaUnama),
+                      child: const Text('@Unama Oficial'),
+                    ),
+                  )),
+              Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 80,
+                    child: ElevatedButton(
+                      onPressed: () async => _onPressed(_urlInstaCurso),
+                      child: const Text('@Computação Unama'),
+                    ),
+                  )),
+            ],
+          ),
         ),
       ),
     );

@@ -4,8 +4,8 @@ import 'package:unama_maps/data/places.dart';
 import '../widgets/help_dialog.dart';
 import '../widgets/map_pin_maker.dart';
 
-class MapPage extends StatelessWidget {
-  MapPage({super.key});
+class Map2d extends StatelessWidget {
+  Map2d({super.key});
 
   List<Widget> generateMapPinList() {
     List<Widget> listaDePins = [];
@@ -30,7 +30,8 @@ class MapPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mapa 📍'),
+        title: const Text('Mapa'),
+        centerTitle: true,
         actions: const [
           HelpDialog(),
         ],

@@ -1,9 +1,9 @@
-import '../models/unama_map_pin_data.dart';
+import 'package:unama_maps/models/unama_map_pin_data.dart';
 
 final List<UnamaMapPinData> placeListData = [
   UnamaMapPinData(
     placeName: 'Biblioteca',
-    distanceTop: 0.385,
+    distanceTop: 0.432,
     distanceLeft: 0.31,
     id: 'biblioteca',
     intro:
@@ -13,7 +13,7 @@ final List<UnamaMapPinData> placeListData = [
   ),
   UnamaMapPinData(
     placeName: 'Labs Computação',
-    distanceTop: 0.46,
+    distanceTop: 0.51,
     distanceLeft: 0.32,
     id: 'labs_pc',
     intro:
@@ -23,8 +23,8 @@ final List<UnamaMapPinData> placeListData = [
   ),
   UnamaMapPinData(
     placeName: 'Bloco F - Cursos saúde',
-    distanceTop: 0.25,
-    distanceLeft: 0.82,
+    distanceTop: 0.32,
+    distanceLeft: 0.83,
     id: 'bloco_f',
     intro:
         'O bloco F é onde acomodam-se as principais salas dos cursos voltados à saúde. ',
@@ -33,7 +33,7 @@ final List<UnamaMapPinData> placeListData = [
   ),
   UnamaMapPinData(
       placeName: 'Auditório',
-      distanceTop: 0.418,
+      distanceTop: 0.465,
       distanceLeft: 0.232,
       id: 'auditorio',
       intro:

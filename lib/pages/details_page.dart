@@ -39,12 +39,16 @@ class DetailsPage extends StatelessWidget {
                     // color: Theme.of(context).primaryColor,
                   ),
                 ),
-                Text(textAlign: TextAlign.center, intro),
-                Image(
-                  image: AssetImage("assets/images/places/$id.png"),
-                  width: double.infinity,
-                  height: 250,
-                  fit: BoxFit.contain,
+                // Text(textAlign: TextAlign.justify, intro),
+                Container(
+                  margin: const EdgeInsets.only(
+                    top: 16,
+                  ),
+                  child: Image(
+                    image: AssetImage("assets/images/places/$id.png"),
+                    width: double.infinity,
+                    fit: BoxFit.contain,
+                  ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 16, bottom: 24),
