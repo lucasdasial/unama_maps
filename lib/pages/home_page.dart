@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:unama_maps/pages/contact_page.dart';
 import 'package:unama_maps/pages/gallery_page.dart';
-import 'package:unama_maps/pages/map_page.dart';
+import 'package:unama_maps/pages/maps_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -43,10 +43,10 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: pc,
         onPageChanged: setCurrentPage,
-        children: [
-          const ContactPage(),
+        children: const [
+          ContactPage(),
           MapPage(),
-          const GalleryPage(),
+          GalleryPage(),
         ],
       ),
       backgroundColor: Colors.green,
