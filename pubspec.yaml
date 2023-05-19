@@ -68,6 +68,7 @@ flutter:
     - assets/images/places/setor_acdm.png
     - assets/images/places/labs_pc.png
     - assets/images/places/auditorio.png
+    - assets/images/places/biblioteca.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -8,6 +8,8 @@ class MapPinMaker extends StatelessWidget {
   final double distanceTop;
   final double distanceLeft;
   final String id;
+  final String intro;
+  final String stepText;
 
   const MapPinMaker({
     super.key,
@@ -15,14 +17,21 @@ class MapPinMaker extends StatelessWidget {
     required this.distanceTop,
     required this.distanceLeft,
     required this.id,
+    required this.intro,
+    required this.stepText,
   });
 
   _handleOnPress(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(
+    Navigator.of(context).push(
+      MaterialPageRoute(
         builder: (ctx) => DetailsPage(
-              placeName: placeName,
-              id: id,
-            )));
+          placeName: placeName,
+          id: id,
+          intro: intro,
+          stepText: stepText,
+        ),
+      ),
+    );
   }
 
   @override
