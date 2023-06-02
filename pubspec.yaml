@@ -63,6 +63,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/map.json
     - assets/images/logo_horizontal.png
     - assets/images/unama_logo.png
     - assets/images/map_unama.png
@@ -71,6 +72,37 @@ flutter:
     - assets/images/places/labs_pc.png
     - assets/images/places/auditorio.png
     - assets/images/places/biblioteca.png
+    - assets/images/steps/labs_pc/0.png
+    - assets/images/steps/labs_pc/1.png
+    - assets/images/steps/labs_pc/2.png
+    - assets/images/steps/labs_pc/3.png
+    - assets/images/steps/labs_pc/4.png
+    - assets/images/steps/labs_pc/5.png
+    - assets/images/steps/labs_pc/6.png
+    - assets/images/steps/labs_pc/7.png
+    - assets/images/steps/auditorio/0.png
+    - assets/images/steps/auditorio/1.png
+    - assets/images/steps/auditorio/2.png
+    - assets/images/steps/auditorio/3.png
+    - assets/images/steps/auditorio/4.png
+    - assets/images/steps/auditorio/5.png
+    - assets/images/steps/auditorio/6.png
+    - assets/images/steps/auditorio/7.png
+    - assets/images/steps/auditorio/8.png
+    - assets/images/steps/biblioteca/0.png
+    - assets/images/steps/biblioteca/1.png
+    - assets/images/steps/biblioteca/2.png
+    - assets/images/steps/biblioteca/3.png
+    - assets/images/steps/biblioteca/4.png
+    - assets/images/steps/biblioteca/5.png
+    - assets/images/steps/biblioteca/6.png
+    - assets/images/steps/bloco_f/0.png
+    - assets/images/steps/bloco_f/1.png
+    - assets/images/steps/bloco_f/2.png
+    - assets/images/steps/bloco_f/3.png
+    - assets/images/steps/bloco_f/4.png
+    - assets/images/steps/bloco_f/5.png
+    - assets/images/steps/bloco_f/6.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

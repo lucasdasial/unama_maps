@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:unama_maps/models/step_data.dart';
 import 'package:unama_maps/pages/contact_page.dart';
 import 'package:unama_maps/pages/details_page.dart';
 
@@ -9,7 +12,7 @@ class MapPinMaker extends StatelessWidget {
   final double distanceLeft;
   final String id;
   final String intro;
-  final String stepText;
+  final List<String> steps;
 
   const MapPinMaker({
     super.key,
@@ -18,7 +21,7 @@ class MapPinMaker extends StatelessWidget {
     required this.distanceLeft,
     required this.id,
     required this.intro,
-    required this.stepText,
+    required this.steps,
   });
 
   _handleOnPress(BuildContext context) {
@@ -28,7 +31,7 @@ class MapPinMaker extends StatelessWidget {
           placeName: placeName,
           id: id,
           intro: intro,
-          stepText: stepText,
+          steps: steps,
         ),
       ),
     );
@@ -36,6 +39,7 @@ class MapPinMaker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // inspect(steps);
     return Positioned(
       top: MediaQuery.of(context).size.height * distanceTop,
       left: MediaQuery.of(context).size.width * distanceLeft,

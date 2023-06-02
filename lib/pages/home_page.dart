@@ -29,7 +29,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void handleOnTap(int pageSelected) {
-    print('lucas');
     pc.animateToPage(
       pageSelected,
       duration: const Duration(milliseconds: 400),

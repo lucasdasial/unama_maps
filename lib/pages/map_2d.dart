@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:unama_maps/data/places.dart';
 
@@ -11,6 +13,7 @@ class Map2d extends StatelessWidget {
     List<Widget> listaDePins = [];
 
     for (var pin in placeListData) {
+      // inspect(pin);
       listaDePins.add(
         MapPinMaker(
           placeName: pin.placeName,
@@ -18,7 +21,7 @@ class Map2d extends StatelessWidget {
           distanceLeft: pin.distanceLeft,
           id: pin.id,
           intro: pin.intro,
-          stepText: pin.stepText,
+          steps: pin.steps,
         ),
       );
     }

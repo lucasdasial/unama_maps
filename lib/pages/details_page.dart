@@ -1,20 +1,28 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:unama_maps/data/places.dart';
+import 'package:unama_maps/models/step_data.dart';
+import 'package:unama_maps/widgets/passo_passo.dart';
 
 class DetailsPage extends StatelessWidget {
   String placeName;
   String id;
   String intro;
-  String stepText;
+  List<String> steps;
 
-  DetailsPage(
-      {super.key,
-      required this.placeName,
-      required this.id,
-      required this.intro,
-      required this.stepText});
+  DetailsPage({
+    super.key,
+    required this.placeName,
+    required this.id,
+    required this.intro,
+    required this.steps,
+  });
 
   @override
   Widget build(BuildContext context) {
+    inspect(id);
+    // inspect(steps);
     return Scaffold(
       appBar: AppBar(
         title: const Image(
@@ -61,30 +69,12 @@ class DetailsPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 200,
-                  child: ListView.builder(
-                    itemCount: 8,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => Container(
-                      width: 300,
-                      height: 100,
-                      margin: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                        child: Text('Passo $index'),
-                      ),
-                    ),
-                  ),
+                  height: 400,
+                  child: PassoPasso(Id: id, steps: steps),
                 ),
                 Container(
                   margin: const EdgeInsets.only(
                     top: 10,
-                  ),
-                  child: Text(
-                    textAlign: TextAlign.justify,
-                    stepText,
                   ),
                 )
               ],

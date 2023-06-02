@@ -24,9 +24,7 @@ class MapPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Lottie.network(
-                  'https://assets10.lottiefiles.com/packages/lf20_qJBTiRSF3l.json',
-                ),
+                Lottie.asset('assets/map.json'),
                 const Text('Escolha um mapa', style: TextStyle(fontSize: 24)),
                 Padding(
                   padding: const EdgeInsets.only(top: 16),

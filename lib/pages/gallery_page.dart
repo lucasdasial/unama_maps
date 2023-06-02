@@ -22,7 +22,6 @@ class GalleryPage extends StatelessWidget {
             id: placeListData[index].id,
             intro: placeListData[index].intro,
             title: placeListData[index].placeName,
-            stepText: placeListData[index].stepText,
           ),
         )),
       ),
@@ -31,17 +30,16 @@ class GalleryPage extends StatelessWidget {
 }
 
 class Card extends StatelessWidget {
-  Card(
-      {super.key,
-      required this.title,
-      required this.id,
-      required this.intro,
-      required this.stepText});
+  Card({
+    super.key,
+    required this.title,
+    required this.id,
+    required this.intro,
+  });
 
   final String title;
   final String id;
   final String intro;
-  final String stepText;
 
   _handleOnPress(BuildContext context) {
     Navigator.of(context).push(
@@ -50,7 +48,7 @@ class Card extends StatelessWidget {
           placeName: title,
           id: id,
           intro: intro,
-          stepText: stepText,
+          steps: [],
         ),
       ),
     );
@@ -59,7 +57,7 @@ class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _handleOnPress(context),
+      onTap: () => {},
       child: Container(
         margin: const EdgeInsets.only(bottom: 18),
         padding: const EdgeInsets.all(16),

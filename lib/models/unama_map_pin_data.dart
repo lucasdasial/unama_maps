@@ -1,10 +1,13 @@
+import 'package:unama_maps/models/step_data.dart';
+
 class UnamaMapPinData {
   final String placeName;
   final double distanceTop;
   final double distanceLeft;
   final String id;
   final String intro;
-  final String stepText;
+
+  final List<String> steps;
 
   UnamaMapPinData(
       {required this.placeName,
@@ -12,5 +15,5 @@ class UnamaMapPinData {
       required this.distanceLeft,
       required this.id,
       required this.intro,
-      required this.stepText});
+      required this.steps});
 }
